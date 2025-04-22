@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha aplicação</title>
+</head>
+<body>
+    <ul id="minhalista">
+        <li>nome</li>
+    </ul>
+<script>
+    async function buscaDados(){
+        const resposta = await fetch("")
+        console.log (resposta)
+        if(resposta.status ===200){
+            const dados = await resposta.json()
+            console.log(dados)
+            for (let index = 0; index < array.length; index++) {
+                const element = array[index];
+                console.log(obj.nome)
+                const li = document.createElement("li")
+                li.innerText = obj.nome
+                ul.appendChild(li)
+                
+            }
+        }else{
+            if(resposta.status ===400){
+                const dados = await resposta.json()
+                alert(dados.mensagem)
+            }else{
+                alert("Erro Desconhecido")
+            }
+        }
+    }    buscaDados()
+</script>
+
+
+</body>
+</html>
